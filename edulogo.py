@@ -19,7 +19,7 @@ if argc < 2:
     print("for help using this tool, run:\n'python edulogo.py -h'")
     quit()
 
-if flag == "-h":
+if flag[0] == "-h":
     print("usage:\npython edulogo.py -[ho] <input file>")
     print("flags:")
     print(" -h            displays this message")
