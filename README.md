@@ -93,7 +93,7 @@ fd -1
 ``
 
 and add 1 parameter to all except n.
-> **note** keep the parameters default name
+> **note**, keep the parameters default name
 
 # Usage:
 python edulogo.py -[ho] <file>
@@ -101,7 +101,8 @@ python edulogo.py -[ho] <file>
 flags:
     -h              brings up this menu
     -o <filename>   specify output file. default "out.txt"
-    > **note**, the -o flag overwrites the given file if it exists, without warning
+
+> **note**, the -o flag overwrites the given file if it exists, without warning
 
 the contents of the output file can now be copied into any setup edulogo project, (see previous paragraph for instructions on how to set up edologo)
 
