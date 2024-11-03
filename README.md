@@ -26,10 +26,10 @@ if pip installed correctly you can skip the following steps.
 if pip did not install
 -
 get the pip binary:
-`curl  https://bootstrap.pypa.io/get-pip.py > pip.py`
+``curl https://bootstrap.pypa.io/get-pip.py > pip.py``
 
 use the python interpeter to install pip:
-`python pip.py`
+``python pip.py``
 
 confirm pip has installed by running `pip --version` again
 
@@ -47,8 +47,8 @@ to install pillow, rune the following command:
 clone this repository and run the script using python:
 ```
 git clone https://github.com/tetie12345/image_to_edulogo.git
-cd image_to_edulogo.git
-python edulogoV2.py
+cd image_to_edulogo
+python edulogo.py
 ```
 
 
