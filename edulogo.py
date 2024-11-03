@@ -1,11 +1,26 @@
-#! /Library/Frameworks/Python.framework/Versions/3.13/bin/python3
 from PIL import Image
 from math import *
 import sys
 
-if len(sys.argv) < 2:
+flag = ""
+argc = len(sys.argv)
+
+for i in range(len(sys.argv)):
+    if "-" in sys.argv[i]:
+        flag = sys.argv[i]
+        sys.argv.pop(i)
+
+if argc < 2:
     print("missing arguments")
-    exit
+    print("for help using this tool, run:\n'python edulogo.py -h'")
+    quit()
+
+if flag == "-h":
+    print("usage:\npython edulogo.py -[ho] <input file>")
+    print("flags:")
+    print(" -h            displays this message")
+    print(" -o <file>     puts the output into a file")
+    quit()
 
 img = Image.open(sys.argv[1])
 

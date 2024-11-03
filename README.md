@@ -4,6 +4,15 @@ converts an image file into executable code in edulogo
 # dependencies:
 pip:
     PILLOW
+
+# Installation:
+clone this repository and run the script using python:
+```
+git clone https://github.com/tetie12345/image_to_edulogo.git
+cd image_to_edulogo.git
+python edulogoV2.py
+```
+
 s:
 
 setRGB :c :param
