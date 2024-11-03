@@ -56,16 +56,6 @@ python edulogo.py
 
 **the script is now ready to be used**
 
-# Usage:
-python edulogo.py -[ho] <file>
-
-flags:
-    -h              brings up this menu
-    -o <filename>   specify output file. default "out.txt"
-    > **note**, the -o flag overwrites the given file if it exists, without warning
-
-the contents of the output file can now be copied into any setup edulogo project, (see the next paragraph for instructions on how to set up edologo)
-
 # Setup inside EL:
 assuming you have edulogo installed, the setup is simple.
 
@@ -101,3 +91,26 @@ r:
 setcolor :param
 fd -1
 ``
+
+and add 1 parameter to all except n.
+> **note** keep the parameters default name
+
+# Usage:
+python edulogo.py -[ho] <file>
+
+flags:
+    -h              brings up this menu
+    -o <filename>   specify output file. default "out.txt"
+    > **note**, the -o flag overwrites the given file if it exists, without warning
+
+the contents of the output file can now be copied into any setup edulogo project, (see previous paragraph for instructions on how to set up edologo)
+
+to run the script, paste it into the EL editor, and hit cmd+R to run it
+
+
+# FAQ
+when i try to run the the edulogo script, it gives an error.
+- make sure you created the correct procedures inside edulogo, the procedures tab is found under `window > show procedures`
+
+running the python script gives an error
+- make sure you have the latest version of python, pip, and pillow installed:
