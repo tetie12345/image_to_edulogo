@@ -51,8 +51,12 @@ clone this repository and run the script using python:
 ```
 git clone https://github.com/tetie12345/image_to_edulogo.git
 cd image_to_edulogo
-python edulogo.py
 ```
+
+to run the script, use:
+``
+python edulogo.py <file>
+``
 
 **the script is now ready to be used**
 
