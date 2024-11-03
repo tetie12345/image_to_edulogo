@@ -1,6 +1,7 @@
 from PIL import Image
 from math import *
 import sys
+import os
 
 flag = ""
 argc = len(sys.argv)
@@ -19,8 +20,11 @@ if flag == "-h":
     print("usage:\npython edulogo.py -[ho] <input file>")
     print("flags:")
     print(" -h            displays this message")
-    print(" -o <file>     puts the output into a file")
+    print(" -o <file>     specify the output file")
     quit()
+
+elif flag == "-o":
+    pass
 
 img = Image.open(sys.argv[1])
 
@@ -28,6 +32,8 @@ width, height = img.size
 img = img.convert("RGB")
 
 pixels = img.load()
+
+
 
 print(f'cs\npu\nsetposition [-{ceil(width/2)} {ceil(height/2)}]\npd\nmake "w {width}\nmake "c 0')
 
