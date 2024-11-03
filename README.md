@@ -7,8 +7,8 @@ contents:
 - dependencies
     - installing dependencies
 - installation
-    - setup
 - usage
+- setup inside EL
 
 # support:
 image_to_edulogo is **only** supported on unix based operating systems, and only tested on macOS
@@ -62,18 +62,26 @@ python edulogo.py -[ho] <file>
 flags:
     -h              brings up this menu
     -o <filename>   specify output file. default "out.txt"
+    > **note**, the -o flag overwrites the given file if it exists, without warning
 
+the contents of the output file can now be copied into any setup edulogo project, (see the next paragraph for instructions on how to set up edologo)
 
+# Setup inside EL:
+assuming you have edulogo installed, the setup is simple.
+
+create **4** procedures, and name them: s, r, e, and n
+and program them like so:
 
 s:
-
+``
 setRGB :c :param
 setpencolor :c
 make "c :c + 1
 fd -1
+``
 
 e:
-
+``
 pu
 rt 90
 fd 1
@@ -81,12 +89,15 @@ rt 90
 fd :param * -1
 rt 180
 pd
+``
 
 n:
-
+``
 fd -1
+``
 
 r:
-
+``
 setcolor :param
 fd -1
+``
