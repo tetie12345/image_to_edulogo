@@ -16,7 +16,7 @@ contents:
 **PILLOW**, an image processing library for python
 
 ## installing dependencies:
-to install python, go to [the python website](www.python.org) and download the latest version of python, then simply follow the instructions
+to install python, go to [the python website](https://www.python.org) and download the latest version of python, then simply follow the instructions
 
 after installing python, make sure you also installed pip. to check if pip is installed, run the following command:
 `pip --version`
