@@ -101,7 +101,6 @@ python edulogo.py -[ho] <file>
 flags:
 
     -h              brings up this menu
-
     -o <filename>   specify output file. default "out.txt"
 
 > **note**, the -o flag overwrites the given file if it exists, without warning
