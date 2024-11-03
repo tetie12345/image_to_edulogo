@@ -3,3 +3,6 @@ setup.txt
 .DS_Store?
 .Spotlight-V100
 token
+block/*
+block
+rainbow.png

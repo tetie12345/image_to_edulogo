@@ -23,12 +23,10 @@ if flag[0] == "-h":
     print("usage:\npython edulogo.py -[ho] <input file>")
     print("flags:")
     print(" -h            displays this message")
-    print(" -o <file>     specify the output file")
+    print(" -o <file>     specify the output file, default = out.txt")
     quit()
 
-print(flag)
 if flag[0] == "-o":
-    print(argc)
     if argc > flag[1] + 1:
         outputFile = sys.argv[flag[1]]
         sys.argv.pop(flag[1])
