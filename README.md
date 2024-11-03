@@ -3,12 +3,15 @@ converts an image file into executable code in edulogo
 
 contents:
 -
+- support
 - dependencies
     - installing dependencies
 - installation
     - setup
 - usage
 
+# support:
+image_to_edulogo is **only** supported on unix based operating systems, and only tested on macOS
 
 # dependencies:
 **python 3.12+**, the python interpeter
@@ -51,7 +54,14 @@ cd image_to_edulogo
 python edulogo.py
 ```
 
+**the script is now ready to be used**
 
+# Usage:
+python edulogo.py -[ho] <file>
+
+flags:
+    -h              brings up this menu
+    -o <filename>   specify output file. default "out.txt"
 
 
 
