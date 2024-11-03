@@ -26,7 +26,7 @@ after installing python, make sure you also installed pip. to check if pip is in
 
 if pip installed correctly you can skip the following steps.
 
-if pip did not install
+alternative pip install
 -
 get the pip binary:
 ``curl https://bootstrap.pypa.io/get-pip.py > pip.py``
