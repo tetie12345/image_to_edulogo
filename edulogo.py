@@ -64,6 +64,7 @@ with open(outputFile, "x") as file:
 
     for i in range(width):
         for j in range(height):
+            print(f"{round(((width*i+j)/(width*height))*100, 3)}% done     ", end = "\r")
             color = (pixels[i,j][0], pixels[i,j][1], pixels[i,j][2])
             if color == lastcolor:
                 file.write("n\n")
