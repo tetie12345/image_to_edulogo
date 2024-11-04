@@ -11,7 +11,7 @@ contents:
 - setup inside EL
 
 # support:
-image_to_edulogo is **only** supported on unix based operating systems, and only tested on macOS
+image_to_edulogo has been tested on macOS, but should work on all operating systems
 
 # dependencies:
 **python 3.12+**, the python interpeter
@@ -120,3 +120,6 @@ when i try to run the the edulogo script, it gives an error.
 
 running the python script gives an error
 - make sure you have the latest version of python, pip, and pillow installed:
+
+the python script doesn't work / doesn't do anything
+- although quite optimal, the script can take up to 3 minutes to covert an image

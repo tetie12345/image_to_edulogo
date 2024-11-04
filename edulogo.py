@@ -34,6 +34,14 @@ if flag[0] == "-o":
         print("missing arguments")
         quit()
 
+if not os.path.isfile(sys.argv[1]):
+    if os.path.isdir(sys.argv[1]):
+        print(f"path '{sys.argv[1]}' is a directory")
+    print(f"no such file: '{sys.argv[1]}'")
+    quit()
+
+outputFile = outputFile.removesuffix("/")
+
 img = Image.open(sys.argv[1])
 
 width, height = img.size
