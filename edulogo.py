@@ -53,15 +53,16 @@ with open(outputFile, "x") as file:
 
     for i in range(width):
         for j in range(height):
-            if (pixels[i,j][0], pixels[i,j][1], pixels[i,j][2]) == lastcolor:
+            color = (pixels[i,j][0], pixels[i,j][1], pixels[i,j][2])
+            if color == lastcolor:
                 file.write("n\n")
                 continue
 
-            if (pixels[i,j][0], pixels[i,j][1], pixels[i,j][2]) in colors:
-                file.write(f"r {colors.index((pixels[i,j][0], pixels[i,j][1], pixels[i,j][2]))}\n")
+            if color in colors:
+                file.write(f"r {colors.index(color)}\n")
             else:
-                colors.append((pixels[i,j][0], pixels[i,j][1], pixels[i,j][2]))
+                colors.append(color)
                 file.write(f"s [{pixels[i,j][0]} {pixels[i,j][1]} {pixels[i,j][2]}]\n")
-            lastcolor = (pixels[i,j][0], pixels[i,j][1], pixels[i,j][2])
+            lastcolor = color
         file.write(f"e :w\n")
 
