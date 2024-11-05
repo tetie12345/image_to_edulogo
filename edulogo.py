@@ -1,5 +1,4 @@
 # Created by tetie12345 on 10-03-2024
-# free to use by any
 
 from PIL import Image
 from math import *
