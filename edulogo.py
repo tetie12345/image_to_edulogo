@@ -67,14 +67,14 @@ with open(outputFile, "x") as file:
             print(f"{round(((width*i+j)/(width*height))*100, 3)}% done     ", end = "\r")
             color = (pixels[i,j][0], pixels[i,j][1], pixels[i,j][2])
             if color == lastcolor:
-                file.write("n\n")
+                file.write("n ")
                 continue
 
             if color in colors:
-                file.write(f"r {colors.index(color)}\n")
+                file.write(f"r {colors.index(color)} ")
             else:
                 colors.append(color)
-                file.write(f"s [{pixels[i,j][0]} {pixels[i,j][1]} {pixels[i,j][2]}]\n")
+                file.write(f"s [{pixels[i,j][0]} {pixels[i,j][1]} {pixels[i,j][2]}] ")
             lastcolor = color
-        file.write(f"e :w\n")
+        file.write(f"e :w ")
 
