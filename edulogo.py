@@ -60,14 +60,21 @@ with open(outputFile, "x") as file:
     steps = 1
     lastcolor = (-1, -1, -1)
     colors = []
+    nCount = 0
 
     for i in range(width):
         for j in range(height):
             print(f"{round(((width*i+j)/(width*height))*100, 3)}% done     ", end = "\r")
             color = (pixels[i,j][0], pixels[i,j][1], pixels[i,j][2])
             if color == lastcolor:
-                file.write("n ")
+                nCount += 1
                 continue
+            elif nCount == 1:
+                file.write(f"n ")
+                nCount = 0
+            elif nCount > 1:
+                file.write(f"m {nCount} ")
+                nCount = 0
 
             if color in colors:
                 file.write(f"r {colors.index(color)} ")
@@ -75,5 +82,9 @@ with open(outputFile, "x") as file:
                 colors.append(color)
                 file.write(f"s [{pixels[i,j][0]} {pixels[i,j][1]} {pixels[i,j][2]}] ")
             lastcolor = color
+        if nCount == 1:
+            file.write("n ")
+        elif nCount > 1:
+            file.write(f"m {nCount} ")
+        nCount = 0
         file.write(f"e :w ")
-

@@ -63,7 +63,7 @@ python edulogo.py <file>
 # Setup inside EL:
 assuming you have edulogo installed, the setup is simple.
 
-create **4** procedures, and name them: s, r, e, and n
+create **5** procedures, and name them: s, r, e, m, and n
 and program them like so:
 
 s:
@@ -94,6 +94,11 @@ r:
 ``
 setcolor :param
 fd -1
+``
+
+m:
+``
+fd 0 - :param
 ``
 
 and add 1 parameter to all except n.
