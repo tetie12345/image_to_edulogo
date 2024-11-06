@@ -1,7 +1,7 @@
 # Created by tetie12345 on 10-03-2024
 
 from PIL import Image
-from math import *
+from math import ceil
 import sys
 import os
 
