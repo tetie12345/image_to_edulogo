@@ -55,7 +55,7 @@ if os.path.isfile(outputFile): os.remove(outputFile)
 
 with open(outputFile, "x") as file:
 
-    file.write(f'cs\npu\nsetposition [-{ceil(width/2)} {ceil(height/2)}]\npd\nmake "w {width}\nmake "c 0\n')
+    file.write(f'cs pu setposition [-{ceil(width/2)} {ceil(height/2)}] pd make "w {width} make "c 0 ')
 
     steps = 1
     lastcolor = (-1, -1, -1)
