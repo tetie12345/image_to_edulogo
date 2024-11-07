@@ -116,7 +116,7 @@ And add 1 parameter to all except n.
 > **Note**: keep the default parameter names.
 
 # Usage:
-python edulogo.py -[ho] <file>
+`python edulogo.py -[ho] <file>`
 
 flags:
 
