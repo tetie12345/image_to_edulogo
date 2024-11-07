@@ -1,69 +1,80 @@
-# image_to_edulogo
-converts an image file into executable code in edulogo
+# Image_to_edulogo
+Converts an image file into executable code in edulogo
 
-contents:
+Contents:
 -
-- support
-- dependencies
-    - installing dependencies
-- installation
-- usage
-- setup inside EL
+- Limitations
+- Dependencies
+    - Installing dependencies
+- Installation
+- Usage
+- Setup inside Edulogo  
 
-# support:
-image_to_edulogo has been tested on macOS, but should work on all operating systems
+# Limitations
+Since the script goes through all pixels in an image, it may take a while for some images to be converted.
+This time depends on the amount of unique colors in the image.
+
+This script has only been tested on macOS, as Edulogo is only available for mac.
+
+Some images have an issue where the image is skewed, we are working on finding the cause of this issue, and fixing it.
+
+The canvas in Edulogo is only 500x500, meaning any image with a larger size than that will be cropped to fit.
 
 # dependencies:
-**python 3.12+**, the python interpeter
-**pip 24+**, a package manager for python libraries
-**PILLOW**, an image processing library for python
+**Python 3.13+**, The python interpeter.
 
-## installing dependencies:
-to install python, go to [the python website](https://www.python.org) and download the latest version of python, then simply follow the instructions
+**Pip 24+**, A package manager for python libraries.
 
-after installing python, make sure you also installed pip. to check if pip is installed, run the following command:
+**PILLOW**, An image processing library for python.
+
+## Installing dependencies:
+To install Python, go to [the python website](https://www.python.org) and download the latest version of python, then simply follow the instructions.
+
+After installing python, make sure you also installed pip. to check if pip is installed, run the following command:
 `pip --version`
 
-if pip installed correctly you can skip the following steps.
+If pip installed correctly you can skip the following steps.
 
-alternative pip install
+Alternative pip install
 -
-get the pip binary:
-``curl https://bootstrap.pypa.io/get-pip.py > pip.py``
+Get the pip binary:
+``curl https://bootstrap.pypa.io/get-pip.py > pip.py``.
 
-use the python interpeter to install pip:
-``python pip.py``
+Use the python interpeter to install pip:
+``python pip.py``.
 
-confirm pip has installed by running `pip --version` again
+Confirm pip has installed by running `pip --version` again.
 
 ---
 
-to install pillow, rune the following command:
+To install pillow, run the following command:
+
 `pip install pillow`
 
-> **note** if this command outputs an error, check if pip is installed correctly, and up to date
-> to update pip, run `pip install --upgrade pip`
+> **Note**: If this command outputs an error, check if pip is installed correctly, and up to date.
+
+> To update pip, run `pip install --upgrade pip`.
 
 # Installation:
-**make sure you have installed all dependencies before using the script.**
+**Make sure you have installed all dependencies before using the script.**
 
-clone this repository and run the script using python:
+Clone this repository and run the script using python:
 ```
 git clone https://github.com/tetie12345/image_to_edulogo.git
 cd image_to_edulogo
 ```
 
-to run the script, use:
+To run the script, use:
 ``
 python edulogo.py <file>
 ``
 
-**the script is now ready to be used**
+**The script is now ready to be used.**
 
-# Setup inside EL:
-assuming you have edulogo installed, the setup is simple.
+# Setup inside Edulogo:
+Assuming you have edulogo installed, the setup is simple.
 
-create **5** procedures, and name them: s, r, e, m, and n
+Create **5** procedures, and name them: s, r, e, m, and n.
 and program them like so:
 
 s:
@@ -72,7 +83,7 @@ setRGB :c :param
 setpencolor :c
 make "c :c + 1
 fd -1
-``
+``.
 
 e:
 ``
@@ -83,26 +94,26 @@ rt 90
 fd :param * -1
 rt 180
 pd
-``
+``.
 
 n:
 ``
 fd -1
-``
+``.
 
 r:
 ``
 setcolor :param
 fd -1
-``
+``.
 
 m:
 ``
 fd 0 - :param
-``
+``.
 
-and add 1 parameter to all except n.
-> **note**, keep the parameters default name
+And add 1 parameter to all except n.
+> **Note**: keep the default parameter names.
 
 # Usage:
 python edulogo.py -[ho] <file>
@@ -112,19 +123,19 @@ flags:
     -h              brings up this menu
     -o <filename>   specify output file. default "out.txt"
 
-> **note**, the -o flag overwrites the given file if it exists, without warning
+> **note**: the -o flag overwrites the given file if it exists, without warning
 
-the contents of the output file can now be copied into any setup edulogo project, (see previous paragraph for instructions on how to set up edologo)
+The contents of the output file can now be copied into any setup edulogo project, (see previous paragraph for instructions on how to set up Edulogo).
 
-to run the script, paste it into the EL editor, and hit cmd+R to run it
+To run the script, paste it into the EL editor, and hit cmd+R to run it.
 
 
 # FAQ
-when i try to run the the edulogo script, it gives an error.
-- make sure you created the correct procedures inside edulogo, the procedures tab is found under `window > show procedures`
+When i try to run the the edulogo script, it gives an error.
+- Make sure you created the correct procedures inside edulogo, the procedures tab is found under `window > show procedures`.
 
-running the python script gives an error
-- make sure you have the latest version of python, pip, and pillow installed:
+Running the python script gives an error.
+- make sure you have the latest version of python, pip, and pillow installed.
 
-the python script doesn't work / doesn't do anything
-- although quite optimal, the script can take up to 3 minutes to covert an image
+The python script doesn't work / doesn't do anything.
+- although quite optimal, the script can take up to 3 minutes to covert an image.
